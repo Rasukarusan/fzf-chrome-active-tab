@@ -24,6 +24,8 @@ This script use a apple script in shell script.
 ### Homebrew
 
 ```bash
+brew tap Rasukarusan/tap
+brew install Rasukarusan/tap/fzf-crhome-active-tab
 ```
 
 ### Manually
@@ -35,6 +37,10 @@ $ git clone https://github.com/Rasukarusan/fzf-crhome-active-tab.git
 ## Usage
 
 ```bash
+# homebrew
+$ chrome-tab-activate
+
+# manually
 $ cd fzf-crhome-active-tab
-$ ./chromeSelectTab.sh
+$ ./chrome-tab-activate
 ```
