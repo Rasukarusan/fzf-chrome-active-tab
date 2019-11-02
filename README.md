@@ -24,8 +24,8 @@ This script use a apple script in shell script.
 ### Homebrew
 
 ```bash
-brew tap Rasukarusan/tap
-brew install Rasukarusan/tap/fzf-crhome-active-tab
+$ brew tap Rasukarusan/tap
+$ brew install Rasukarusan/tap/fzf-crhome-active-tab
 ```
 
 ### Manually
