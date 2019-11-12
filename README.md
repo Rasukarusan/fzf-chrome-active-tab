@@ -12,7 +12,7 @@ You can activate google chrome tab by fzf.
 This script use a apple script in shell script.
 
 ## Demo
-![demo.gif](https://user-images.githubusercontent.com/17779386/68064910-5587d400-fd65-11e9-878d-dad19bb435aa.gif)
+![demo.gif](https://user-images.githubusercontent.com/17779386/68667406-3b31cf80-0589-11ea-9a0d-33145e155dc1.gif)
 
 ## Requirement
 
@@ -45,6 +45,20 @@ $ cd fzf-chrome-active-tab
 $ ./chrome-tab-activate
 ```
 
+### Options
+```bash
+$ chrome-tab-activate --preview-window up # up / down / right /left
+$ chrome-tab-activate --no-preview
+```
+
 ## Articles
 
 https://www.rasukarusan.com/entry/2019/11/03/190519
+
+## License
+
+> The MIT License (MIT)
+> 
+> Copyright (c) 2017 Junegunn Choi
+
+https://github.com/junegunn/fzf
