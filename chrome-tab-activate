@@ -39,10 +39,12 @@ EOF
 
 function main() {
     local selected
-    IFS=$'\t' read -r -a selected < <(getTabs | sed '/^$/d' | fzf --delimiter $'\t' --with-nth 3)
+    IFS=$'\t' read -r -a selected < <(
+        getTabs | sed '/^$/d' | fzf --delimiter $'\t' --with-nth 3 --preview 'echo {4}' --preview-window down:1 "$@"
+    )
     [ ${#selected[@]} -lt 2 ] && return 130
 
     setActiveTab ${selected[0]} ${selected[1]}
 }
 
-main
+main "$@"
