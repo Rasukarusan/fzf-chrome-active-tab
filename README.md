@@ -1,4 +1,4 @@
-fzf-crhome-active-tab
+fzf-chrome-active-tab
 ====
 
 ![header](https://user-images.githubusercontent.com/17779386/68013992-ba91ea00-fcd1-11e9-9cb5-7dd78dc4ed8c.png)
@@ -25,13 +25,13 @@ This script use a apple script in shell script.
 
 ```bash
 $ brew tap Rasukarusan/tap
-$ brew install Rasukarusan/tap/fzf-crhome-active-tab
+$ brew install Rasukarusan/tap/fzf-chrome-active-tab
 ```
 
 ### Manually
 
 ```bash
-$ git clone https://github.com/Rasukarusan/fzf-crhome-active-tab.git
+$ git clone https://github.com/Rasukarusan/fzf-chrome-active-tab.git
 ```
 
 ## Usage
@@ -41,7 +41,7 @@ $ git clone https://github.com/Rasukarusan/fzf-crhome-active-tab.git
 $ chrome-tab-activate
 
 # manually
-$ cd fzf-crhome-active-tab
+$ cd fzf-chrome-active-tab
 $ ./chrome-tab-activate
 ```
 
