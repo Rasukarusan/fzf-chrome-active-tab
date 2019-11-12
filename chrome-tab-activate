@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 function getTabs() {
 osascript << EOF
@@ -10,7 +10,7 @@ osascript << EOF
             repeat with t in tabs of w
                 set _title to get title of t
                 set _url to get URL of t
-                set _output to (_output & _window_index & "\t" & _tab_index & "\t" & _title & "\t" & _url & "\n")
+                set _output to (_output & _window_index & "\t" & _tab_index & "\t" & _url & "\t" & _title & "\n")
                 set _tab_index to _tab_index + 1
             end repeat
             set _window_index to _window_index + 1
@@ -38,11 +38,13 @@ EOF
 }
 
 function main() {
-    local tabs=$(getTabs)
-    local title=$(echo "${tabs}" | awk -F '\t' '{print $3}' | fzf)
-    local window_index tab_index
-    read window_index tab_index <<< "$(echo "${tabs}" | grep -F "${title}" | head -n 1 | awk -F '\t' '{print $1, $2}')"
-    setActiveTab $window_index $tab_index
+    local selected
+    IFS=$'\t' read -r -a selected < <(
+        getTabs | sed '/^$/d' | fzf --delimiter $'\t' --with-nth 4 --preview 'echo {3}' --preview-window down:1 "$@"
+    )
+    [ ${#selected[@]} -lt 2 ] && return 130
+
+    setActiveTab ${selected[0]} ${selected[1]}
 }
 
-main
+main "$@"
