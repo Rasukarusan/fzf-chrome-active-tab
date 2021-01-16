@@ -54,11 +54,3 @@ $ chrome-tab-activate --no-preview
 ## Articles
 
 https://www.rasukarusan.com/entry/2019/11/03/190519
-
-## License
-
-> The MIT License (MIT)
-> 
-> Copyright (c) 2017 Junegunn Choi
-
-https://github.com/junegunn/fzf
